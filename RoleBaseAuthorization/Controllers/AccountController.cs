@@ -52,13 +52,13 @@ namespace RoleBaseAuthorization.Controllers
                 // Add role to the user
                 await _userManager.AddToRoleAsync(user,role);
                 return StatusCode(StatusCodes.Status403Forbidden,
-                    new Response { Status = "Success", Message = "Created New User Successfully" });
+                    new Response { Status = "Success", Message = "Created New User Successfully!" });
 
             }
             else
             {
                 return StatusCode(StatusCodes.Status403Forbidden,
-                    new Response { Status = "Error", Message = "This Role Doest not exit" });
+                    new Response { Status = "Error", Message = "This Role Does not exit" });
 
             }
            
